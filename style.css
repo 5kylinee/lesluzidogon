@@ -115,6 +115,8 @@ nav {
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    flex-direction: column;
+    padding: 0 10%;
 }
 
 /* Background Image for Quote Section */
@@ -144,9 +146,10 @@ nav {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    max-width: 80%;
+    max-width: 60%;
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 /* Contact Section */
