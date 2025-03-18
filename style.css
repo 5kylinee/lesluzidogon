@@ -150,25 +150,35 @@ nav {
     text-align: center;
 }
 
-/* Quote Styling */
-.scroll-spotlight-text-wrapper {
-    position: absolute;
-    top: 50px;
-    bottom: 50px;
-    left: 20px;
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+/* Fixed Quote Styling */
+.quote-text {
+    font-size: 6vw; /* Restored larger font size */
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: rgba(255, 255, 255, 1); /* Default full white */
     opacity: 0;
-    transform: translateY(50%);
-    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-.scroll-spotlight-text-wrapper.show {
+.quote-text.show {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateY(0);
+}
+
+.quote-text span {
+    opacity: 0.2; /* Restored faded text effect */
+}
+
+.quote-text .highlight {
+    opacity: 1; /* Keeps these words fully white */
 }
 
 /* Contact Section */
