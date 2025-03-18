@@ -1,18 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const quoteText = document.querySelector(".scroll-spotlight-text-wrapper");
+    const quoteText = document.querySelector(".quote-text");
 
-    function handleScroll() {
-        const rect = quoteText.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
+    // Intersection Observer for Quote Animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                quoteText.classList.add("show");
+                observer.unobserve(quoteText); // Ensures animation triggers only once
+            }
+        });
+    }, { threshold: 0.5 });
 
-        // Trigger animation when the text is about 40% into the viewport
-        if (rect.top < viewportHeight * 0.6 && rect.bottom > viewportHeight * 0.4) {
-            quoteText.classList.add("show");
-        } else {
-            quoteText.classList.remove("show"); // Allows re-triggering when scrolling back up
-        }
-    }
+    observer.observe(quoteText);
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Run once on load in case it's already in view
+    // Parallax Effect for Hero Image
+    const heroImage = document.querySelector(".hero-image img");
+
+    window.addEventListener("scroll", () => {
+        let scrollPosition = window.scrollY;
+        heroImage.style.transform = `translate(-50%, calc(-50% + ${scrollPosition * 0.3}px))`;
+    });
 });
