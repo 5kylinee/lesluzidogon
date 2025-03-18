@@ -122,6 +122,7 @@ nav {
     text-align: center;
     overflow: hidden;
     flex-direction: column;
+    width: 100%;
 }
 
 .about::before {
@@ -139,6 +140,14 @@ nav {
 
 .about-image img {
     display: none;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
 }
 
 .quote-text {
