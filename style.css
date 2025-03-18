@@ -150,9 +150,9 @@ nav {
     text-align: center;
 }
 
-/* Fixed Quote Styling */
+/* Quote Styling */
 .quote-text {
-    font-size: 6vw; /* Restored larger font size */
+    font-size: 3vw;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -1px;
@@ -174,7 +174,7 @@ nav {
 }
 
 .quote-text span {
-    opacity: 0.2; /* Restored faded text effect */
+    opacity: 0.2; /* Makes the text 20% visible */
 }
 
 .quote-text .highlight {
