@@ -142,15 +142,7 @@ nav {
     display: none;
 }
 
-.about-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-}
-
-/* Quote Styling */
+/* Fade-in effect for the quote */
 .quote-text {
     font-size: 3vw;
     font-weight: 900;
@@ -162,15 +154,16 @@ nav {
     position: relative;
     z-index: 1;
     text-align: center;
-    color: rgba(255, 255, 255, 1); /* Default full white */
+    color: rgba(255, 255, 255, 1);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Slightly pushed down */
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.quote-text span {
-    opacity: 0.2; /* Makes the text 20% visible */
-}
-
-.quote-text .highlight {
-    opacity: 1; /* Keeps these words fully white */
+/* When visible, fade in */
+.quote-text.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Contact Section */
