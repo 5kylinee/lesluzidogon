@@ -1,41 +1,42 @@
-/* Import Font (Replace with the actual font used in the reference) */
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-
-body {
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Archivo Black', sans-serif;
-    background-color: #F5F5F5;
+    box-sizing: border-box;
+    font-family: 'Bauhaus 93', sans-serif; /* Use the closest match to the reference font */
+}
+
+body {
+    background-color: #f0f0f0;
     color: #000;
     text-align: center;
     overflow-x: hidden;
 }
 
-/* Navbar Styling */
-.navbar {
+/* Navigation Bar */
+nav {
     position: absolute;
     top: 20px;
     right: 50px;
     display: flex;
-    gap: 30px;
-    font-size: 16px;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.navbar a {
+nav a {
     text-decoration: none;
     color: #000;
-    padding: 10px 20px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
-.navbar a:hover {
-    background-color: yellow;
-    color: black;
-    border-radius: 5px;
+nav a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
 }
 
-/* Hero Section */
-.hero {
+/* Header Section */
+.header {
     position: relative;
     width: 100%;
     height: 90vh;
@@ -45,47 +46,75 @@ body {
     flex-direction: column;
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
+.header img {
+    width: 80%;
+    max-width: 1200px;
+    object-fit: cover;
 }
 
-.hero-text {
+/* Title Section */
+.title {
+    position: absolute;
+    bottom: 10px;
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: bold;
+    letter-spacing: -3px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.title span {
+    display: block;
+    font-size: 4rem;
+}
+
+/* Lower Section */
+.lower-section {
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.lower-section img {
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.lower-text {
     position: absolute;
     bottom: 50px;
-    text-align: center;
-    font-size: 80px;
-    letter-spacing: -2px;
-    text-transform: uppercase;
-}
-
-.hero-text span {
-    display: block;
-    font-size: 40px;
-    line-height: 1;
-}
-
-/* Racing Info Section */
-.racing-info {
-    background-color: black;
-    color: white;
-    padding: 100px 50px;
-    font-size: 22px;
+    left: 50px;
+    font-size: 1.5rem;
+    max-width: 80%;
+    text-align: left;
     font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-/* Image Below Text */
-.car-image {
-    width: 100%;
-    height: auto;
+.lower-text strong {
+    font-size: 2rem;
+    color: #fff;
 }
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.hero-text, .racing-info {
-    animation: fadeIn 1s ease-in-out;
+.header img, .lower-section img {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Hover Effects */
+nav a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
 }
