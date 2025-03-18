@@ -49,14 +49,35 @@ nav {
 .hero {
     position: relative;
     height: 100vh;
-    background: url('car1.png') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 }
 
+/* Hero Image */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hero Text */
 .hero-content {
-    padding: 20px;
+    z-index: 1;
+    text-align: center;
+    margin-top: 20vh;
 }
 
 .hero-content h1 {
@@ -71,8 +92,11 @@ nav {
     margin-top: 10px;
 }
 
+/* Bottom Logo */
 .bottom-logo {
-    padding: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
 }
 
 .bottom-logo img {
