@@ -9,11 +9,20 @@
   </head>
   <body>
     <main>
-        <h1>Dzień dobr, Leśluzidogon Racing, czyli profesionalny team esportowy iRacing</h1>
-      <button onclick="document.getElementById('bg-music').play()">Play Music</button>
-     <audio id="bg-music" autoplay loop>
-    <source src="Dni%2C%20ktorych%20nie%20znamy%20-%20Plateau.mp3" type="audio/mpeg">
-     </audio>
+      <h1>Dzień dobry, Leśluzidogon Racing, czyli profesjonalny team esportowy iRacing</h1>
+      
+      <button id="playButton">Play Music</button>
+
+      <audio id="bg-music" loop>
+        <source src="Dni, ktorych nie znamy - Plateau.mp3" type="audio/mpeg">
+      </audio>
     </main>
-  </body>
-</html>
+
+    <script>
+      const audio = document.getElementById("bg-music");
+      const playButton = document.getElementById("playButton");
+
+      playButton.addEventListener("click", function () {
+        if (audio.paused) {
+          audio.play();
+          playButton.textC
