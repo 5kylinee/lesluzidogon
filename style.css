@@ -45,7 +45,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #f00;
+    color: #f00; /* Highlight color on hover */
 }
 
 /* Hero Section */
@@ -60,6 +60,7 @@ nav {
     overflow: hidden;
 }
 
+/* Hero Background Image */
 .hero-image {
     position: absolute;
     top: 0;
@@ -75,6 +76,7 @@ nav {
     object-fit: cover;
 }
 
+/* DUST-Style Hero Text */
 .hero-content {
     z-index: 1;
     text-align: center;
@@ -82,18 +84,19 @@ nav {
 }
 
 .hero-content h1 {
-    font-family: 'Anton', sans-serif;
-    font-size: 12vw;
+    font-family: 'Anton', sans-serif; /* Bold & Stretched */
+    font-size: 12vw; /* Responsive Scaling */
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: -2px;
-    line-height: 0.85;
+    letter-spacing: -2px; /* Tighter Spacing */
+    line-height: 0.85; /* Compact Look */
     text-align: center;
     display: block;
-    transform: scaleX(1.1);
+    transform: scaleX(1.1); /* Slight Stretch for DUST effect */
     color: #fff;
 }
 
+/* Bottom Logo */
 .bottom-logo {
     position: absolute;
     bottom: 20px;
@@ -104,52 +107,55 @@ nav {
     height: 40px;
 }
 
-/* About Section - Updated to Match Reference */
+/* About Section - Now the Quote Section */
 .about {
-    position: relative;
-    width: 100%;
-    height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 50px 20px;
+    background-color: #111;
+    position: relative;
     text-align: center;
-    color: #fff;
     overflow: hidden;
+    height: 90vh;
 }
 
-.about-image {
+.about::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: url('car2.png') center/cover no-repeat;
+    filter: brightness(30%) blur(3px); /* Darker and blurred image */
     z-index: -1;
 }
 
-.about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .about-content {
-    position: absolute;
-    width: 80%;
-    max-width: 800px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+    max-width: 90%;
+    text-align: center;
 }
 
 .about-content h2 {
-    font-size: 48px;
-    font-weight: 700;
-    text-transform: uppercase;
+    display: none; /* Remove the "About Us" heading */
 }
 
 .about-content p {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 3vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Strong Highlighted Parts */
+.about-content p strong {
+    color: white;
+    font-weight: 900;
 }
 
 /* Contact Section */
@@ -187,5 +193,5 @@ nav {
 }
 
 .social a:hover {
-    color: #f00;
+    color: #f00; /* Highlight color on hover */
 }
