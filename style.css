@@ -1,122 +1,111 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leśluzidogon Racing</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2DB1ED;
-            padding: 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-        #hero {
-            background: url('car1.png') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        #hero h2 {
-            position: relative;
-            font-size: 2.5rem;
-        }
-        #gallery {
-            padding: 40px;
-            text-align: center;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .gallery-grid img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        #contact {
-            background-color: #1A1A1A;
-            padding: 40px;
-            text-align: center;
-        }
-        #contactBtn {
-            background-color: #2DB1ED;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
-            cursor: pointer;
-            color: white;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>LEŚLUZIDOGON RACING</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">O Nas</a></li>
-                <li><a href="#gallery">Galeria</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
-    <section id="hero">
-        <div class="overlay"></div>
-        <h2>Profesjonalny team esportowy iRacing</h2>
-    </section>
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
 
-    <section id="gallery">
-        <h2>Nasze Samochody</h2>
-        <div class="gallery-grid">
-            <img src="car1.png" alt="Car 1">
-            <img src="car2.png" alt="Car 2">
-            <img src="car3.png" alt="Car 3">
-            <img src="car4.png" alt="Car 4">
-        </div>
-    </section>
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 400;
+}
 
-    <section id="contact">
-        <h2>Skontaktuj się z nami</h2>
-        <p>Odwiedź naszą stronę lub wyślij wiadomość!</p>
-        <button id="contactBtn">Kontakt</button>
-    </section>
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: url('PASTE LINK HERE (hero image)') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 10px auto;
+}
 
-    <!-- Hidden Audio Feature -->
-    <audio id="bg-music" loop>
-        <source src="INDIAN.mp3" type="audio/mpeg">
-    </audio>
+/* Section Styling */
+.section {
+    padding: 100px 50px;
+    text-align: center;
+}
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+/* Video Section */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.video-item {
+    width: 45%;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+.video-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Portfolio Section */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+.portfolio img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+    background: url('PASTE LINK HERE (contact image)') no-repeat center center/cover;
+    padding: 150px 50px;
+    text-align: center;
+}
+.contact h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #111;
+    font-size: 14px;
+}
