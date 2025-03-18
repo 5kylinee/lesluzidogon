@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     const quoteText = document.querySelector(".quote-text");
 
-    // Intersection Observer for Quote Animation
+    // Intersection Observer for Quote Animation (Plays Again on Scroll)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 quoteText.classList.add("show");
-                observer.unobserve(quoteText); // Ensures animation triggers only once
+            } else {
+                quoteText.classList.remove("show"); // Remove class when out of view
             }
         });
     }, { threshold: 0.5 });
