@@ -13,7 +13,7 @@
     <!-- Navigation -->
     <nav>
         <div class="logo">
-            <img src="blackbullblue.png">
+            <img src="blackbullblue.png" alt="Logo">
         </div>
         <ul class="nav-links">
             <li><a href="#about">About Us</a></li>
@@ -67,16 +67,15 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const quoteText = document.querySelector(".quote-text");
-
+            
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         quoteText.classList.add("show");
+                        observer.unobserve(quoteText);
                     }
                 });
-            }, {
-                threshold: 0.6 // Trigger when 60% of the section is visible
-            });
+            }, { threshold: 0.5 });
 
             observer.observe(quoteText);
         });
