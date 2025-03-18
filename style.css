@@ -150,18 +150,27 @@ nav {
     text-align: center;
 }
 
+/* Quote Styling */
 .quote-text {
     font-size: 3vw;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -1px;
-    color: rgba(255, 255, 255, 0.9);
     line-height: 1.2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     max-width: 80%;
     position: relative;
     z-index: 1;
     text-align: center;
+    color: rgba(255, 255, 255, 1); /* Default full white */
+}
+
+.quote-text span {
+    opacity: 0.2; /* Makes the text 20% visible */
+}
+
+.quote-text .highlight {
+    opacity: 1; /* Keeps these words fully white */
 }
 
 /* Contact Section */
