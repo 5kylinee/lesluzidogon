@@ -13,6 +13,11 @@ body {
     background-color: #000;
     color: #fff;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 /* Navigation Bar */
@@ -45,12 +50,13 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #f00; /* Highlight color on hover */
+    color: #f00;
 }
 
 /* Hero Section */
 .hero {
     position: relative;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -60,11 +66,11 @@ nav {
     overflow: hidden;
 }
 
-/* Hero Background Image */
 .hero-image {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -76,7 +82,6 @@ nav {
     object-fit: cover;
 }
 
-/* DUST-Style Hero Text */
 .hero-content {
     z-index: 1;
     text-align: center;
@@ -90,52 +95,52 @@ nav {
     text-transform: uppercase;
     letter-spacing: -2px;
     line-height: 0.85;
-    display: block;
     transform: scaleX(1.1);
     color: #fff;
+    text-align: center;
 }
 
 /* Bottom Logo */
 .bottom-logo {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .bottom-logo img {
     height: 40px;
 }
 
-/* Quote Section (Previously About Section) */
+/* Quote Section */
 .about {
     position: relative;
-    height: 100vh; /* Same height as hero section */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    flex-direction: column;
 }
 
-/* Background Image for Quote Section */
 .about::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     height: 100%;
     background: url('car2.png') center/cover no-repeat;
-    filter: brightness(15%) blur(4px); /* Darker and blurred */
+    filter: brightness(15%) blur(4px);
     z-index: -1;
 }
 
-/* Ensures Car2.png has the same size as Car1.png */
 .about-image img {
-    display: none; /* Hide standalone image since we're using background */
+    display: none;
 }
 
-/* Quote Text */
 .quote-text {
     font-size: 3vw;
     font-weight: 900;
@@ -147,6 +152,7 @@ nav {
     max-width: 80%;
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 /* Contact Section */
@@ -184,5 +190,5 @@ nav {
 }
 
 .social a:hover {
-    color: #f00; /* Highlight color on hover */
+    color: #f00;
 }
