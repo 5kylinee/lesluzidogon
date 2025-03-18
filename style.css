@@ -45,7 +45,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #f00; /* Highlight color on hover */
+    color: #f00;
 }
 
 /* Hero Section */
@@ -60,7 +60,6 @@ nav {
     overflow: hidden;
 }
 
-/* Hero Background Image */
 .hero-image {
     position: absolute;
     top: 0;
@@ -76,7 +75,6 @@ nav {
     object-fit: cover;
 }
 
-/* DUST-Style Hero Text */
 .hero-content {
     z-index: 1;
     text-align: center;
@@ -84,19 +82,18 @@ nav {
 }
 
 .hero-content h1 {
-    font-family: 'Anton', sans-serif; /* Bold & Stretched */
-    font-size: 12vw; /* Responsive Scaling */
+    font-family: 'Anton', sans-serif;
+    font-size: 12vw;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: -2px; /* Tighter Spacing */
-    line-height: 0.85; /* Compact Look */
+    letter-spacing: -2px;
+    line-height: 0.85;
     text-align: center;
     display: block;
-    transform: scaleX(1.1); /* Slight Stretch for DUST effect */
+    transform: scaleX(1.1);
     color: #fff;
 }
 
-/* Bottom Logo */
 .bottom-logo {
     position: absolute;
     bottom: 20px;
@@ -107,37 +104,52 @@ nav {
     height: 40px;
 }
 
-/* About Section */
+/* About Section - Updated to Match Reference */
 .about {
+    position: relative;
+    width: 100%;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 50px 20px;
-    background-color: #111;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.about-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .about-content {
+    position: absolute;
+    width: 80%;
     max-width: 800px;
-    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .about-content h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .about-content p {
     font-size: 18px;
     line-height: 1.6;
-}
-
-.about-image {
-    margin-top: 30px;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 800px;
 }
 
 /* Contact Section */
@@ -175,5 +187,5 @@ nav {
 }
 
 .social a:hover {
-    color: #f00; /* Highlight color on hover */
+    color: #f00;
 }
