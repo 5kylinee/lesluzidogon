@@ -1,122 +1,67 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leśluzidogon Racing</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2DB1ED;
-            padding: 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-        #hero {
-            background: url('car1.png') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        #hero h2 {
-            position: relative;
-            font-size: 2.5rem;
-        }
-        #gallery {
-            padding: 40px;
-            text-align: center;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .gallery-grid img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        #contact {
-            background-color: #1A1A1A;
-            padding: 40px;
-            text-align: center;
-        }
-        #contactBtn {
-            background-color: #2DB1ED;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
-            cursor: pointer;
-            color: white;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Genesis Studio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- PASTE LINK HERE (CSS File) -->
 </head>
 <body>
-    <header>
-        <h1>LEŚLUZIDOGON RACING</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">O Nas</a></li>
-                <li><a href="#gallery">Galeria</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
+    <header class="hero-section">
+        <video autoplay muted loop>
+            <source src="PASTE LINK HERE (Hero Background Video)" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h1>GENESIS®</h1>
+            <h2>WE MAKE VIDEOS</h2>
+        </div>
     </header>
-
-    <section id="hero">
-        <div class="overlay"></div>
-        <h2>Profesjonalny team esportowy iRacing</h2>
+    
+    <section class="intro-text">
+        <p>We shoot and produce everything from films to videos, with a quality you can trust...</p>
     </section>
 
-    <section id="gallery">
-        <h2>Nasze Samochody</h2>
-        <div class="gallery-grid">
-            <img src="car1.png" alt="Car 1">
-            <img src="car2.png" alt="Car 2">
-            <img src="car3.png" alt="Car 3">
-            <img src="car4.png" alt="Car 4">
+    <section class="content-grid">
+        <div class="grid-item">
+            <img src="PASTE LINK HERE (Image 1)" alt="Creative Work">
+            <h3>WE MAKE VIDEOS THAT TURN HEADS</h3>
+        </div>
+        <div class="grid-item">
+            <img src="PASTE LINK HERE (Image 2)" alt="Creative Work">
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Skontaktuj się z nami</h2>
-        <p>Odwiedź naszą stronę lub wyślij wiadomość!</p>
-        <button id="contactBtn">Kontakt</button>
+    <section class="studio-intro">
+        <h2>A CREATIVE VIDEO PRODUCTION STUDIO</h2>
+        <div class="studio-image">
+            <img src="PASTE LINK HERE (Studio Image)" alt="Studio">
+        </div>
     </section>
 
-    <!-- Hidden Audio Feature -->
-    <audio id="bg-music" loop>
-        <source src="INDIAN.mp3" type="audio/mpeg">
-    </audio>
+    <section class="video-motion-section">
+        <h2>VIDEO. MOTION. SOUND. BRANDING.</h2>
+        <p>PASTE MADE-UP TEXT HERE</p>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="award-winning-work">
+        <h2>AWARD-WINNING VIDEO PRODUCTION WORK</h2>
+        <div class="work-gallery">
+            <img src="PASTE LINK HERE (Work Image 1)" alt="Work 1">
+            <img src="PASTE LINK HERE (Work Image 2)" alt="Work 2">
+            <img src="PASTE LINK HERE (Work Image 3)" alt="Work 3">
+            <img src="PASTE LINK HERE (Work Image 4)" alt="Work 4">
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-card">How to Build a Strong Personal Brand?</div>
+        <div class="blog-card">What is the Duty of an Executive Producer?</div>
+        <div class="blog-card">What Do You Need to Start Your Career?</div>
+    </section>
+
+    <footer class="contact-section">
+        <h2>GET IN TOUCH</h2>
+        <p>PASTE CONTACT LINKS HERE</p>
+    </footer>
 </body>
 </html>
