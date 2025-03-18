@@ -1,26 +1,17 @@
-// Get elements
-const audio = document.getElementById("bg-music");
-const playButton = document.getElementById("playButton");
-const volumeControl = document.getElementById("volumeControl");
-const volumeLabel = document.getElementById("volumeLabel");
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const quoteText = document.querySelector(".quote-text");
 
-// Set default volume to 100% (1.0)
-audio.volume = 1.0;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    quoteText.classList.add("show");
+                }
+            });
+        }, {
+            threshold: 0.6 // Trigger when 60% of the section is visible
+        });
 
-// Play/Pause button functionality
-playButton.addEventListener("click", function () {
-  if (audio.paused) {
-    audio.play();
-    playButton.textContent = "Pause Music";
-  } else {
-    audio.pause();
-    playButton.textContent = "Play Music";
-  }
-});
-
-// Volume control functionality
-volumeControl.addEventListener("input", function () {
-  let volume = volumeControl.value / 100; // Convert range (0-100) to (0-1)
-  audio.volume = volume; // Set the volume
-  volumeLabel.textContent = volumeControl.value + "%"; // Update label
-});
+        observer.observe(quoteText);
+    });
+</script>
