@@ -163,13 +163,13 @@ nav {
     z-index: 1;
     text-align: center;
     color: rgba(255, 255, 255, 1); /* Default full white */
-    opacity: 0; /* Initially hidden */
+    opacity: 0;
     transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .quote-text.show {
-    opacity: 1; /* Fully visible when scrolled */
+    opacity: 1;
     transform: translateY(0);
 }
 
