@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 quoteText.classList.add("show");
+            } else {
+                quoteText.classList.remove("show");
             }
         });
     }, {
-        threshold: 0.6 // Trigger when 60% of the section is visible
+        threshold: 0.5 // Trigger when 50% of the quote section is visible
     });
 
     observer.observe(quoteText);
