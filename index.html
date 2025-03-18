@@ -25,4 +25,12 @@
       playButton.addEventListener("click", function () {
         if (audio.paused) {
           audio.play();
-          playButton.textC
+          playButton.textContent = "Pause Music"; // Change button text
+        } else {
+          audio.pause();
+          playButton.textContent = "Play Music"; // Change back
+        }
+      });
+    </script>
+  </body>
+</html>
