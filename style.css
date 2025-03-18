@@ -45,7 +45,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #f00; /* Highlight color on hover */
+    color: #f00;
 }
 
 /* Hero Section */
@@ -60,7 +60,6 @@ nav {
     overflow: hidden;
 }
 
-/* Hero Background Image */
 .hero-image {
     position: absolute;
     top: 0;
@@ -76,7 +75,6 @@ nav {
     object-fit: cover;
 }
 
-/* DUST-Style Hero Text */
 .hero-content {
     z-index: 1;
     text-align: center;
@@ -95,29 +93,32 @@ nav {
     color: #fff;
 }
 
-/* Bottom Logo */
-.bottom-logo {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+/* Middle Logo */
+.middle-logo {
+    position: relative;
+    width: 50%; /* Adjust based on reference */
+    max-width: 300px;
+    margin: -50px auto; /* Adjust overlap */
+    z-index: 2;
 }
 
-.bottom-logo img {
-    height: 40px;
+.middle-logo img {
+    width: 100%;
+    display: block;
 }
 
-/* Quote Section (Previously About Section) */
+/* Quote Section */
 .about {
     position: relative;
-    height: 100vh; /* Same height as hero section */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    flex-direction: column;
 }
 
-/* Background Image for Quote Section */
 .about::before {
     content: "";
     position: absolute;
@@ -126,16 +127,10 @@ nav {
     width: 100%;
     height: 100%;
     background: url('car2.png') center/cover no-repeat;
-    filter: brightness(15%) blur(4px); /* Darker and blurred */
+    filter: brightness(15%) blur(4px);
     z-index: -1;
 }
 
-/* Ensures Car2.png has the same size as Car1.png */
-.about-image img {
-    display: none; /* Hide standalone image since we're using background */
-}
-
-/* Quote Text */
 .quote-text {
     font-size: 3vw;
     font-weight: 900;
@@ -144,9 +139,10 @@ nav {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    max-width: 80%;
+    max-width: 60%; /* More centered and compact */
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 /* Contact Section */
@@ -184,5 +180,5 @@ nav {
 }
 
 .social a:hover {
-    color: #f00; /* Highlight color on hover */
+    color: #f00;
 }
