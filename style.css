@@ -150,7 +150,18 @@ nav {
     text-align: center;
 }
 
-/* Quote Styling */
+/* Quote Styling with Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .quote-text {
     font-size: 3vw;
     font-weight: 900;
@@ -162,23 +173,22 @@ nav {
     position: relative;
     z-index: 1;
     text-align: center;
-    color: rgba(255, 255, 255, 1); /* Default full white */
+    color: #fff;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .quote-text.show {
-    opacity: 1;
-    transform: translateY(0);
+    animation: fadeInUp 1.5s ease-out forwards;
 }
 
 .quote-text span {
-    opacity: 0.2; /* Makes the text 20% visible */
+    opacity: 0.2;
 }
 
 .quote-text .highlight {
-    opacity: 1; /* Keeps these words fully white */
+    opacity: 1;
 }
 
 /* Contact Section */
