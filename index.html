@@ -17,20 +17,6 @@
         <source src="Dni, ktorych nie znamy - Plateau.mp3" type="audio/mpeg">
       </audio>
     </main>
-
-    <script>
-      const audio = document.getElementById("bg-music");
-      const playButton = document.getElementById("playButton");
-
-      playButton.addEventListener("click", function () {
-        if (audio.paused) {
-          audio.play();
-          playButton.textContent = "Pause Music"; // Change button text
-        } else {
-          audio.pause();
-          playButton.textContent = "Play Music"; // Change back
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
