@@ -186,33 +186,39 @@ nav {
     }
 }
 
-/* Car4 Section */
 .car4-section {
+    position: relative;
     width: 100%;
-    padding: 50px 20px;
+    max-height: 500px; /* Adjust height as needed */
+    overflow: hidden;
     text-align: center;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .car4-image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    transition: transform 0.3s;
+    object-fit: cover;  /* Ensures the image covers the space */
+    display: block;
 }
 
-.car4-image:hover {
-    transform: scale(1.05);
+.car4-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Text color over image */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5); /* Optional text shadow for better visibility */
+    z-index: 2; /* Ensures text is above the image */
 }
 
-/* Fade-In Animation for Sections */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.car4-text h2 {
+    font-size: 36px;
+    font-family: 'Anton', sans-serif;
+}
+
+.car4-text p {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
 }
 
