@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leśluzidogon Racing</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About Us - Leśluzidogon Racing</title>
+    <link rel="stylesheet" href="style2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
@@ -17,69 +17,23 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="randomshit.html">Important</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Timer -->
     <section class="hero">
         <div class="hero-content">
-            <h1>About our<br><span>"team"</span></h1>
+            <h2>The day Leśluzidogon was born:</h2>
+            <div id="timer" class="timer">Loading...</div>
         </div>
         <div class="hero-image">
-            <img src="car2.png" alt="Racing Car">
-        </div>
-        <div class="bottom-logo">
-            <img src="blacklr.png" alt="Leśluzidogon Text Logo">
+            <img src="car3.png" alt="Racing Car">
         </div>
     </section>
 
-    <!-- Quote Section -->
-    <section id="about" class="about">
-        <div class="about-image">
-            <img src="car2.png" alt="Racing Car 2">
-        </div>
-        <div class="about-content">
-            <p class="quote-text">
-                <span class="highlight">Speed is Everything.</span>
-                <span> More precision. More adrenaline. More control. More wins. More podiums. More unforgettable moments on the track. More challenges. More passion. More racing. </span>
-                <span class="highlight">Speed of a storm, strength of a bull.</span>
-            </p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Legal Notice</h2>
-        <p>This website is created purely for fun and is not affiliated with or monetized in any way. 
-        If you have any concerns or wish for content to be removed, you may request a takedown by emailing:</p>
-        <p>Email: johnnyonfortnite442@gmail.com</p>
-    </section>
-
-    <!-- Social Media Section -->
-    <section id="social" class="social">
-        <h2>Follow Us</h2>
-        <a href="https://www.youtube.com/channel/UCXXXXXX" target="_blank">YouTube</a>
-    </section>
-
-    <!-- JavaScript for Scroll Animation -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const quoteText = document.querySelector(".quote-text");
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        quoteText.classList.add("show");
-                        observer.unobserve(quoteText);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            observer.observe(quoteText);
-        });
-    </script>
+    <script src="script2.js"></script>
 </body>
 </html>
