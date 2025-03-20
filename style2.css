@@ -186,19 +186,20 @@ nav {
     }
 }
 
+/* Car4 Section */
 .car4-section {
     position: relative;
     width: 100%;
-    max-height: 500px; /* Adjust height as needed */
+    height: 500px; /* Same height as car1, car2, car3 */
     overflow: hidden;
     text-align: center;
 }
 
 .car4-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;  /* Ensures the image covers the space */
-    display: block;
+    width: 100%; /* Set to cover the full width */
+    height: 100%; /* Set to full height */
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+    display: block; /* Ensures no space below the image */
 }
 
 .car4-text {
@@ -220,4 +221,6 @@ nav {
     color: #fff;
     margin-top: 10px;
 }
+
+/* No hover effect or animation */
 
