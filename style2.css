@@ -30,8 +30,6 @@ nav {
     align-items: center;
     padding: 20px;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.8);
-    box-shadow: 0px 0px 10px rgba(45, 177, 237, 0.8);
 }
 
 .logo img {
@@ -53,7 +51,6 @@ nav {
 
 .nav-links a:hover {
     color: #2DB1ED;
-    text-shadow: 0px 0px 10px rgba(45, 177, 237, 0.8);
 }
 
 /* Hero Section */
@@ -99,13 +96,14 @@ nav {
     text-transform: uppercase;
     letter-spacing: -2px;
     line-height: 0.85;
+    transform: scaleX(1.1);
     color: #fff;
     text-align: center;
-    text-shadow: 0px 0px 20px rgba(45, 177, 237, 0.9), 0px 0px 30px rgba(45, 177, 237, 0.8);
+    margin-bottom: 10px;
 }
 
 /* Timer Styling */
-#timer-container {
+.timer-container {
     text-align: center;
     margin-top: 20px;
     font-size: 3vw;
@@ -113,36 +111,11 @@ nav {
     letter-spacing: 2px;
     color: #2DB1ED;
     text-shadow: 0 0 10px rgba(45, 177, 237, 0.8), 0 0 20px rgba(45, 177, 237, 0.6);
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.2); /* Transparent but slightly dark */
+    backdrop-filter: blur(10px); /* Blurred background */
     padding: 15px 25px;
     border-radius: 10px;
     display: inline-block;
     box-shadow: 0px 0px 20px rgba(45, 177, 237, 0.5);
-    animation: glowPulse 1.5s infinite alternate;
-}
-
-@keyframes glowPulse {
-    0% {
-        box-shadow: 0px 0px 10px rgba(45, 177, 237, 0.5);
-    }
-    100% {
-        box-shadow: 0px 0px 20px rgba(45, 177, 237, 0.9);
-    }
-}
-
-/* Timer Number Animation */
-#timer span {
-    display: inline-block;
-    animation: popUp 0.5s ease-in-out;
-}
-
-@keyframes popUp {
-    0% {
-        transform: translateY(10px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    border: 2px solid rgba(45, 177, 237, 0.8);
 }
