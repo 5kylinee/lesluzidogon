@@ -31,7 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         timerText += `${months} months, ${weeks} weeks, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
         
-        document.getElementById("timer").textContent = timerText;
+        const timerElement = document.getElementById("timer");
+        timerElement.textContent = timerText;
+
+        // Add a jump animation when the timer updates
+        timerElement.classList.add("jump");
+        setTimeout(() => {
+            timerElement.classList.remove("jump");
+        }, 300);
     }
     
     setInterval(updateTimer, 1000);
