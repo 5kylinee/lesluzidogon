@@ -80,9 +80,10 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(30%) blur(2px);
+    filter: brightness(50%) blur(6px);  /* Darken and blur the image */
 }
 
+/* Hero Content */
 .hero-content {
     z-index: 1;
     text-align: center;
@@ -102,20 +103,86 @@ nav {
     margin-bottom: 10px;
 }
 
-/* Timer Styling */
-.timer-container {
-    text-align: center;
+/* Timer Section */
+#timer-container {
     margin-top: 20px;
     font-size: 3vw;
     font-weight: bold;
     letter-spacing: 2px;
     color: #2DB1ED;
     text-shadow: 0 0 10px rgba(45, 177, 237, 0.8), 0 0 20px rgba(45, 177, 237, 0.6);
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.6);
     padding: 15px 25px;
     border-radius: 10px;
     display: inline-block;
-    box-shadow: 0px 0px 20px rgba(45, 177, 237, 0.5), 0px 0px 40px rgba(45, 177, 237, 0.3);
-    border: 2px solid rgba(45, 177, 237, 0.8);
+    box-shadow: 0px 0px 20px rgba(45, 177, 237, 0.5);
+    animation: pulseAnimation 2s infinite;
 }
+
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Legal Notice Section */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #bbb;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Social Media Section */
+.social {
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.social h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.social a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.social a:hover {
+    color: #2DB1ED;
+}
+
+/* Fade-In Animation for Sections */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
