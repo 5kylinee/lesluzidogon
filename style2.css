@@ -141,14 +141,14 @@ nav {
 .contact h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+    text-shadow: none;  /* Removed neon text-shadow */
 }
 
 .contact p {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #bbb;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    color: #bbb; /* Regular text color without neon */
+    text-shadow: none;  /* Removed neon text-shadow */
 }
 
 /* Social Media Section */
@@ -161,7 +161,7 @@ nav {
 .social h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+    text-shadow: none;  /* Removed neon text-shadow */
 }
 
 .social a {
@@ -169,7 +169,7 @@ nav {
     color: #fff;
     font-size: 24px;
     transition: color 0.3s;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow: none;  /* Removed neon text-shadow */
 }
 
 .social a:hover {
