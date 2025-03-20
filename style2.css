@@ -57,7 +57,7 @@ nav {
 .hero {
     position: relative;
     width: 100%;
-    height: 150vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,26 +88,48 @@ nav {
     width: 100%;
 }
 
-/* Timer Section */
-.timer-section {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 2vw;
-    font-weight: bold;
-}
-
-.timer-label {
-    font-size: 1.5vw;
-    color: #2DB1ED;
+.hero-content h1 {
+    font-size: 8vw; /* Smaller than the homepage */
+    font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    letter-spacing: -2px;
+    line-height: 0.85;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 10%; /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.timer {
-    font-size: 2.5vw;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 10px;
-    display: inline-block;
+#timer-container {
+    position: absolute;
+    top: 25%; /* Below the text */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#timer-label {
+    font-size: 2vw;
+    font-weight: 700;
+    color: #aaa;
+}
+
+#timer {
+    font-size: 3vw;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Bottom Logo */
+.bottom-logo {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom-logo img {
+    height: 40px;
 }
