@@ -199,6 +199,7 @@ nav {
     height: 100%; /* Set to full height */
     object-fit: cover; /* Ensures the image covers the container without stretching */
     display: block; /* Ensures no space below the image */
+    filter: brightness(30%) blur(2px);
 }
 
 .car4-text {
