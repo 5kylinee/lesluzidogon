@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leśluzidogon Racing</title>
+    <title>INF03 - Galeria</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style3.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="logo">
             <img src="blackbullblue.png" alt="Logo">
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="about.html">O nas</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
             <li><a href="https://forum-lesluzidogon.pages.dev/">Forum</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Leśluzidogon<br><span>Racing</span></h1>
@@ -36,50 +33,40 @@
         </div>
     </section>
 
-    <!-- Quote Section -->
     <section id="about" class="about">
         <div class="about-image">
             <img src="car2.png" alt="Racing Car 2">
         </div>
         <div class="about-content">
             <p class="quote-text">
-                <span class="highlight">Speed is Everything.</span>
-                <span> More precision. More adrenaline. More control. More wins. More podiums. More unforgettable moments on the track. More challenges. More passion. More racing. </span>
-                <span class="highlight">Speed of a storm, strength of a bull.</span>
+                <span class="highlight">Samochody</span>
             </p>
+
+            <!-- Galeria -->
+            <div class="gallery" id="gallery">
+                <div class="g-stage">
+                    <button class="g-arrow g-prev" id="g-prev" aria-label="Poprzednie zdjęcie">&#10094;</button>
+                    <div class="g-viewport" id="g-viewport">
+                        <img src="car6.png" alt="Zdjęcie 1">
+                    </div>
+                    <button class="g-arrow g-next" id="g-next" aria-label="Następne zdjęcie">&#10095;</button>
+                </div>
+                <div class="g-counter" id="g-counter">1 / 6</div>
+                <div class="g-thumbs" id="g-thumbs"></div>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Legal Notice</h2>
-        <p>This website is created purely for fun and is not affiliated with or monetized in any way. 
-        If you have any concerns or wish for content to be removed, you may request a takedown by emailing:</p>
-        <p>Email: johnnyonfortnite442@gmail.com</p>
+        <h2>INF 03</h2>
+        <p>Zadanie domowe Konrad M.</p>
     </section>
 
-    <!-- Social Media Section -->
-    <section id="social" class="social">
-        <h2>Follow Us</h2>
+    <section class="social">
+        <h2>Zaobserwuj nas!</h2>
         <a href="https://www.youtube.com/channel/UCXXXXXX" target="_blank">YouTube</a>
     </section>
 
-    <!-- JavaScript for Scroll Animation -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const quoteText = document.querySelector(".quote-text");
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        quoteText.classList.add("show");
-                        observer.unobserve(quoteText);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            observer.observe(quoteText);
-        });
-    </script>
+    <script src="script3.js"></script>
 </body>
 </html>
